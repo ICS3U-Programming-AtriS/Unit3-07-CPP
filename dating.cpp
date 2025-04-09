@@ -13,9 +13,9 @@
 
 int main() {
     // Get the user's age as a string
-    std::string age_as_string;
+    std::string ageAsString;
     std::cout << "Enter your age: ";
-    std::cin >> age_as_string;
+    std::cin >> ageAsString;
 
     // MAKE CONSTANTS FOR AGE BOUNDARIES
     const int MIN_APPROVED_AGE = 26;  // User has to be older than 25
@@ -26,7 +26,7 @@ int main() {
 
     try {
         // Convert the user's age to an integer
-        int age = std::stoi(age_as_string);
+        int age = std::stoi(ageAsString);
 
         // Check if user is older than 25 AND younger than 40
         if ((age >= MIN_APPROVED_AGE) && (age <= MAX_APPROVED_AGE)) {
@@ -42,7 +42,7 @@ int main() {
         }
     } catch (std::invalid_argument) {
         // Tell the user that their input wasn't an integer
-        std::cout << age_as_string;
+        std::cout << ageAsString;
         std::cout << " is not an integer.\n";
     }
     // Program completion message
